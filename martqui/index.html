@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ricardo Quiñonez</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="home">
+        <header>
+            <ul id="menu">
+                <li> <a href="#home"> Home</a> </li>
+                <li> <a href="#subasta"> Subastas</a> </li>
+                <li> <a href="#booking"> Reservas</a> </li>
+                <li> <a href="#contacto"> Contacto</a> </li>
+            </ul>
+        </header>
+
+        <h1>RICARDO QUIÑONEZ</h1>
+        <p>Martillero público / Perito tasador</p>
+    </section>
+    <section id="subasta">
+        <h1>Subastas</h1>
+        <div class="slidercontainer">
+            <div class="showSlide fade">
+                <img src="tres.jpg" />
+                <div class="content">SUBASTA 26/10/2020</div>
+            </div>
+            <div class="showSlide fade">
+                <img src="tres1.jpg" />
+                <div class="content">GOL GRIS</div>
+            </div>
+
+            <div class="showSlide fade">
+                <img src="tres2.jpg" />
+                <div class="content">GOL ROJO</div>
+            </div>
+            <div class="showSlide fade">
+                <img src="tres3.jpg" />
+                <div class="content">GOL BLANCO</div>
+            </div>
+            <!-- Navigation arrows -->
+            <a class="left" onclick="nextSlide(-1)">❮</a>
+            <a class="right" onclick="nextSlide(1)">❯</a>
+        </div>
+    </section>
+
+
+    <!-- BOOKING SECTION/ SEND BOOKING TO EMAIL, LIKE A SIMPLE MESSAGE, MULTIPLE PEOPLE CAN BOOK THE SAME HOUR-->
+    <section id="booking">
+        <h2>Reverva un turno para ver lo que se subasta en persona</h2>
+
+        <!-- BOOKING FORM-->
+        <form id="bookForm" onsubmit="return book();">
+            <label for="nombre">Nombre</label><br>
+            <input type="text" name="nombre" required /><br>
+
+            <label for="email">Email</label><br>
+            <input type="text" name="email" required /><br>
+
+            <label for="telefono">Telefono</label><br>
+            <input type="number" name="numero" required /><br>
+
+            <label for="date">Fecha</label><br>
+            <input type="date" name="date" required><br>
+            <label for="horas">Elige una hora:</label><br>
+            <select name="horas" id="horas">
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+                <option value="19:00">19:00</option>
+                <option value="20:00">20:00</option>
+            </select><br>
+            <input type="submit" value="RESERVAR" disabled id="bookGo" />
+        </form>
+
+    </section>
+    <!-- CONTACT SECTION/ HOW TO SEND TO MAIL RICARDO-QUINONEZ@HOTMAIL.COM-->
+    <section id="contacto">
+        <h4>CONTACTO</h4>
+
+        <div class="container">
+            <form action="action_page.php">
+            </form><label for="nombre">Nombre</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="tu nombre..."><br>
+            <label for="apellido">Apellido</label><br>
+            <input type="text" id="apellido" name="apellido" placeholder="tu apellido..."><br>
+            <label for="telefono">Telefono</label><br>
+            <input type="number" id="telefono" name="telefono" placeholder="3704999999"><br>
+            <label for="tipoconsulta">Consulta acerca</label><br>
+            <select id="tipoconsulta" name="tipoconsulta"><br>
+                <option value="automovil">automovil</option>
+                <option value="inmueble">inmueble</option>
+                <option value="otro">Otro</option>
+                <label for="asunto">Asunto</label>
+            </select><br>
+            <textarea id="asunto" name="asunto" placeholder="Escriba aqui..." style="height:200px"></textarea><br>
+            <input type="submit" value="ENVIAR">
+            </form>
+            <h1>GRACIAS</h1>
+            <p>Recibimos su solicitacion</p>
+        </div>
+    </section>
+
+</body>
+<script src="script.js"></script>
+
+</html>
